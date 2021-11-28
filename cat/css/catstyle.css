@@ -631,7 +631,7 @@ section {
         background: url(../images/cat1.jpg)no-repeat;
         background-size: cover;
         /* ↑整個背景圖片要覆蓋後面 */
-        background-position:-200px;
+        background-position:-220px;
 
     }
 
