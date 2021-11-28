@@ -1,0 +1,666 @@
+/* 版面統一設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    border: none;
+    text-decoration: none;
+    transition: 0.3s all linear;
+    font-size: 22px;
+}
+
+
+/* 第一區 LOGO與導覽列 */
+header {
+    font-size: 20px;
+    /* ↓把導覽列固定在上方 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    /* ↓用fiex的方式置中 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px;
+    background-color: rgb(207, 122, 10);
+    box-shadow: 10px 1rem 1rem rgba(0, 0, 0, 0.1);
+    /* opacity: 0.9; */
+}
+
+header img {
+    width: 110px;
+    margin-bottom: -10px;
+}
+
+header .catLogo {
+    font-size: 32px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+}
+
+header .navbar a {
+    font-size: 22px;
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+    padding-left: 10px;
+}
+
+header .navbar a:hover {
+    font-size: 25px;
+    font-weight: 900;
+    color: rgb(207, 122, 10);
+    margin-left: 10px;
+    transition: 0.6s;
+    background-color: honeydew;
+    border-radius: 10px;
+    padding: 16px 10px 10px 10px;
+}
+
+#menu-bar {
+    font-size: 25px;
+    cursor: pointer;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px;
+    display: none;
+}
+
+/* 第二區 頁首home品牌意象 */
+section {
+    padding: 10px;
+}
+
+.catHome {
+    /* display: flex;
+    flex-wrap: wrap;
+    gap:10px; */
+    min-height: 630px;
+    align-items: center;
+    background: url(../images/cat1.jpg)no-repeat;
+    background-size: cover;
+    /* ↑整個背景圖片要覆蓋後面 */
+    background-position: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.catHome .content {
+    grid-column: 4/6;
+    grid-row: 3/4;
+    margin-top: -40px;
+    margin-left: -45px;
+    /* position: flex; */
+    /* top: 420px;
+    left: 650px; */
+    padding: 15px 0 30px 30px;
+    background: rgb(9, 9, 55);
+    background: linear-gradient(90deg, rgba(9, 9, 55, 0.8407563709077381) 11%, rgba(19, 32, 29, 0.02843144093574934) 100%, rgba(3, 2, 3, 0.529832001159839) 100%);
+}
+
+.catHome .content h3 {
+    font-size: 36px;
+    color: rgb(255, 208, 0);
+}
+
+.catHome .content p {
+    font-size: 18px;
+    color: white;
+    padding: 8px 0 15px 0;
+    font-weight: bold;
+}
+
+.btn {
+    padding: 6px;
+    border: 3px solid rgb(255, 208, 0);
+    color: rgb(255, 208, 0);
+    font-size: 18px;
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.btn:hover {
+    background-color: chocolate;
+    color: white;
+    /* inset是一種動畫效果 */
+    box-shadow: inset 200px 0 0 0 chocolate;
+    transition: 1s all;
+}
+
+#paw {
+    font-size: 22px;
+    margin: 2px;
+    color: rgb(255, 208, 0);
+    animation: pawShow 1s infinite;
+    li
+}
+
+@keyframes pawShow {
+    0% {
+        transform: scale(300%);
+    }
+
+    50% {
+        transform: scale(50%);
+    }
+
+    100% {
+        transform: scale(300%);
+    }
+}
+
+
+
+
+.catHome img {
+    width: 400px;
+    /* position: absolute;
+    top: 250px;
+    left: 700px; */
+    margin-left: -85px;
+    margin-bottom: -75px;
+    grid-column: 4/6;
+    grid-row: 2/3;
+    animation: catMoveing 2s linear infinite;
+}
+
+@keyframes catMoveing {
+    0% {
+        transform: translateY(0rem);
+    }
+
+    50% {
+        transform: translateY(0.5rem);
+    }
+
+    100% {
+        transform: translateX(0rem);
+    }
+}
+
+
+
+
+
+
+/* 第三區 貓咪照片 */
+
+.catPhoto .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+
+}
+
+.catPhoto .box-container .box {
+    flex: 1 1 300px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 10px black;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 20px;
+    height: 380px;
+
+}
+
+.catPhoto .box-container .box .image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: -100%;
+}
+
+.catPhoto .box-container .box .content {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding: 0;
+    height: 275px;
+    background-color: rgb(255, 208, 0);
+}
+
+.catPhoto .box-container .box .content img {
+    height: 285px;
+    margin: -10px -10px 10px -10px;
+}
+
+.catPhoto .box-container .box .content h3 {
+    font-size: 24px;
+}
+
+.catPhoto .box-container .box .content p {
+    font-size: 18px;
+    margin: 10px;
+
+}
+
+.catPhoto .box-container .box:hover .image {
+    left: 0%;
+}
+
+.catPhoto .box-container .box:hover .content {
+    transform: translateY(-200%);
+}
+
+
+
+/* 第四區 吃喝MENU */
+.heading {
+    color: rgb(34, 34, 148);
+    margin: 20px;
+    text-align: center;
+    font-size: 30px;
+    /* border: 1px solid black; */
+    width: 250px;
+    border-radius: 5px;
+    box-shadow: 3px 3px black;
+}
+
+.heading span {
+    color: rgb(241, 157, 31);
+    font-size: 30px;
+}
+
+.catMenu .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.catMenu .box-container .box {
+    flex: 1 1 350px;
+    padding: 10px;
+    box-shadow: 5px 5px 5px rgb(140, 140, 140);
+    border: 1px solid rgb(118, 118, 118);
+    background: url(../images/background2.jpg) no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    padding-bottom: 30px;
+    height: 480px;
+    width: 400px;
+}
+
+.catMenu .box-container .box img {
+    height: 260px;
+    object-fit: cover;
+    width: 100%;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.catMenu .box-container .box .pasta {
+    font-weight: bold;
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    background: chocolate;
+    padding: 10px 60px 10px 60px;
+    opacity: 0.8;
+    position: absolute;
+    /* 設定absolute會貼齊到照片上 */
+}
+
+.catMenu .box-container .box .coffee {
+    font-weight: bold;
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    background: chocolate;
+    padding: 10px 60px 10px 60px;
+    opacity: 0.8;
+    position: absolute;
+    /* 設定absolute會貼齊到照片上 */
+}
+
+
+
+.catMenu .box-container .box h3 {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    padding: 10px 40px 10px 40px;
+    text-align: center;
+    background: rgb(9, 9, 55);
+    background: rgb(9, 9, 55);
+    background: linear-gradient(90deg, rgba(9, 9, 55, 0) 19%, rgba(9, 9, 55, 0.8211485277704832) 50%, rgba(3, 2, 3, 0) 72%);
+}
+
+.catMenu .box-container .stars {
+    color: chocolate;
+    font-size: 20px;
+    padding: 10px 10px 10px 10px;
+    /* ↓把星星置中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.catMenu .box-container .box .btn2 {
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 20px;
+    color: chocolate;
+    /* ↓把按鈕置中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid chocolate;
+}
+
+.catMenu .box-container .box .btn2:hover {
+    background-color: chocolate;
+    color: white;
+    /* ↓內部陰影 */
+    box-shadow: inset 400px 0 0 0 chocolate;
+    transition: 1s all;
+}
+
+.catMenu .box-container .box .icons {
+    /* 變成直排式排列 */
+    display: flex;
+    flex-flow: column;
+
+    color: rgb(9, 152, 152);
+    position: relative;
+    top: -65%;
+    left: -1300%;
+    transform: translate(-50%, -50%);
+    transition: 0.1s;
+    z-index: 1;
+}
+
+.catMenu .box-container .box:hover .icons {
+    left: 122%;
+    opacity: 1;
+}
+
+/* 加星星邊框 */
+.catMenu .box-container .box .icons a {
+    padding: 10px;
+    width: 110px;
+    line-height: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    border: 2px solid chocolate;
+    border-radius: 10px;
+    background-color: white;
+    color: rgb(9, 152, 152);
+    margin-top: 5px;
+    opacity: 0.9;
+}
+
+.catMenu .box-container .box .icons a:hover {
+    background-color: rgb(255, 208, 0);
+    opacity: 1;
+}
+
+
+
+/* 第五區 來找喵玩 */
+.catMap .box-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.catMap .box-content .box {
+    flex: 1 1 350px;
+    display: flex;
+    padding: 10px;
+    /* position: relative;
+    justify-content:start; 
+    align-items:center; */
+}
+
+.catMap .box-content .box p {
+    font-size: 18px;
+    margin: 20px;
+    line-height: 28px;
+}
+
+
+
+/* 第六區 頁尾footer */
+.catfooter {
+    background: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.catfooter h6 {
+    font-size: 12px;
+    color: gray;
+}
+
+.catfooter h6 span {
+    font-size: 12px;
+    color: gray;
+}
+
+/* 回頁面最上層按鈕 */
+#scrollUp {
+    position: fixed;
+    /* top:80%; */
+    top: -120%;
+    right: 20px;
+    padding: 10px;
+    font-size: 25px;
+    background: chocolate;
+    color: white;
+    border-radius: 10px;
+    opacity: 0.8;
+    transition: 1s linear;
+}
+
+/* #scrollUp.active 沒有空格 */
+#scrollUp.active {
+    top: 80%;
+}
+
+
+
+
+
+
+
+/* 第二頁 catPaMa 助養意願 */
+.catPaMa {
+    margin-top: 60px;
+    padding: 15px;
+    display: block;
+}
+
+.catPaMa .PaMa {
+    padding: 10px;
+    box-shadow: 5px 5px 5px rgb(140, 140, 140);
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-radius: 20px;
+}
+
+
+.catPaMa .image img {
+    flex: 1 1 10px;
+    height: 500px;
+    /* width:400px; */
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.catPaMa .formArea {
+    border: 1px solid;
+    box-shadow: 5px 5px 5px rgb(140, 140, 140);
+    padding: 15px;
+    background-color: khaki;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex: 1 1 10px;
+    /* width: 400px; */
+    height: 500px;
+    border-radius: 20px;
+}
+
+.catPaMa .formArea form .inputBox input, .catPaMa .formArea form textarea {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 20px;
+    color: black;
+    text-transform: none;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.catPaMa .formArea form .money {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.catPaMa .formArea form .money option {
+    color: blue;
+}
+
+.catPaMa .formArea form textarea {
+    position: relative;
+    width: 100%;
+    resize: none;
+    height: 200px;
+}
+
+.catPaMa .formArea form .btn3 {
+    position: relative;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 20px;
+    color: chocolate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid chocolate;
+}
+
+.catPaMa .formArea form .btn3:hover {
+    background-color: chocolate;
+    color: white;
+    box-shadow: inset 400px 0 0 0 chocolate;
+    transition: 1s all;
+}
+
+
+
+/* RWD手機版 */
+@media(max-width:600px) {
+
+    /* RWD手機版  第一區 */
+    #menu-bar {
+        display: initial;
+        position: absolute;
+        right: 10px;
+        top: 20px;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background-color: rgb(255, 208, 0);
+        border-top: 3px solid gray;
+        /* 隱藏下拉選單 */
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar a {
+        /* 疊起來 */
+        display: block;
+        font-size: 22px;
+        font-weight: normal;
+        color: rgb(20, 80, 80);
+        margin: 10px;
+        padding: 6px;
+        border-left: 3px solid gray;
+        background-color: white;
+    }
+
+    /* 當按下圖示後會呈現的動作，active用JS控制 */
+    /* .navbar.active中間不能有空格 */
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        padding: 10px;
+    }
+
+    /* RWD手機版  第二區 */
+    .catHome .content h3 {
+        font-size: 30px;
+        color: rgb(255, 208, 0);
+    }
+
+    .catHome .content p {
+        font-size: 14px;
+        color: white;
+        padding: 8px 0 15px 0;
+        font-weight: bold;
+    }
+
+    .btn {
+        padding: 6px;
+        border: 3px solid rgb(255, 208, 0);
+        color: rgb(255, 208, 0);
+        font-size: 14px;
+        border-radius: 10px;
+        z-index: 0;
+    }
+
+    .catHome img {
+        width: 240px;
+    }
+
+    .catHome {
+        align-items: center;
+        background: url(../images/cat1.jpg)no-repeat;
+        background-size: cover;
+        /* ↑整個背景圖片要覆蓋後面 */
+        background-position:-180px;
+
+    }
+
+    .catHome .content {
+        grid-column: 4/6;
+        grid-row: 1/3;
+        margin-top: -25px;
+        margin-left: -45px;
+        /* position: flex; */
+        /* top: 420px;
+        left: 650px; */
+        padding: 20px 0 30px 30px;
+        background: rgb(9, 9, 55);
+        background: linear-gradient(90deg, rgba(9, 9, 55, 0.8407563709077381) 11%, rgba(19, 32, 29, 0.02843144093574934) 100%, rgba(3, 2, 3, 0.529832001159839) 100%);
+    }
+
+    /* RWD手機版  第六區 */
+    .catMap .box-content .box iframe {
+        width: 100%
+    }
+
+    /* RWD助養區 */
+    .catPaMa .image img {
+        width: 100%;
+    }
+
+    .catPaMa .formArea {
+        width: 100%;
+    }
+
+
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>喵餐廳</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- CSS連結 -->
+    <link rel="stylesheet" href="css/catstyle.css">
+</head>
+
+<body>
+
+    <!-- 原第一區 LOGO與導覽列 -->
+    <header>
+        <a href="index.html" class="catLogo"><img src="images/catLogo.png">喵餐廳</a>
+        <!-- RWD 時的按鈕menu-bar-->
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <!-- <a href="#catHome">喵意象</a>            
+            <a href="#catPhoto">看喵趣</a>
+            <a href="#catMenu">吃吃喝喝</a>
+            <a href="#catMap">喵所在</a> -->
+        </nav>
+    </header>
+
+    <!-- 助養人填寫 -->
+    <section class="catPaMa" id="catPaMa">
+        <h1 class="heading">助養人意願表單</h1>
+        <div class="PaMa">
+            <div class="image">
+                <img src="images/catPaMa.jpg" alt="">
+            </div>
+            <div class="formArea">
+                <form action="">
+                    <div class="inputBox">
+                        <label for="">姓名：</label>
+                        <input type="text" placeholder="請輸入真實姓名">
+                    </div>
+                    <div class="inputBox">
+                        <label for="">電話：</label>
+                        <input type="tel" name="usertelphone" pattern="[0-9]{4}-[0-9]{6}" side="40"
+                            placeholder="09xx-xxxxxx">
+                    </div>
+
+                    <div class="money">
+                        <label for="">每月助養意願：</label>
+                        <select name="" id="">
+                            <option value="">請選擇</option>
+                            <option value="100">100元</option>
+                            <option value="300">300元</option>
+                            <option value="500">500元</option>
+                        </select>
+                    </div>
+                    <label class="MASSAGE" for="">留言區：</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <input type="submit" value="送出" class="btn3">
+                </form>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>
